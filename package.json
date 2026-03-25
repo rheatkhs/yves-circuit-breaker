@@ -1,15 +1,31 @@
 {
   "name": "yves-circuit-breaker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A zero-dependency, framework-agnostic Circuit Breaker pattern implementation.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "test": "vitest"
+    "build": "tsc",
+    "test": "vitest",
+    "prepublishOnly": "npm test && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": [
+    "circuit-breaker",
+    "fault-tolerance",
+    "resilience",
+    "typescript",
+    "zero-dependency"
+  ],
+  "author": "rheatkhs",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "@types/node": "^25.5.0",
     "ts-node": "^10.9.2",
